@@ -1,0 +1,23 @@
+<!-- wp:template-part {"slug":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group"><!-- wp:html -->
+<style>:root{--gp-accent:{{gp:accent_color|color_picker|Appearance|#e91e63}}} .gp-hero{border-top:6px solid var(--gp-accent);padding-top:1rem}</style>
+<!-- /wp:html -->
+
+<!-- wp:group {"className":"gp-hero"} -->
+<div class="wp-block-group gp-hero"><!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">{{gp:hero_title|text|home|Welcome to Guava Pattern}}</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>{{gp:hero_text|textarea|home|Edit this text in wp-admin under Guava Pattern.}}</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+{{if gp:hero_image|home|image}}<img src="{{gp:hero_image}}" alt="" style="max-width:100%;height:auto">{{/if}}
+<!-- /wp:html --></div>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer"} /-->

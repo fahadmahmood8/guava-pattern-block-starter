@@ -1,0 +1,21 @@
+<!-- wp:template-part {"slug":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group"><!-- wp:post-title {"level":1} /-->
+
+<!-- wp:paragraph -->
+<p><em>{{gp.page:subtitle|text|page_options}}</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:post-content /-->
+
+<!-- wp:html -->
+{{if gp.page:features|Features|text}}
+<ul class="gp-repeater">
+{{gp.page:features|Features|text}}<li>{{index}}. {{item}}</li>{{/gp.page:features}}
+</ul>
+{{/if}}
+<!-- /wp:html --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer"} /-->
